@@ -3,8 +3,7 @@ import './App.css'
 import GoogleMapReact from 'google-map-react'
 import io from 'socket.io-client'
 import Marker from './Marker'
-// insert api below
-const socket = io('...')
+const socket = io('http://35.238.125.238:8020/admin')
 
 function App() {
   const [state, setState] = useState('Offline')
@@ -149,8 +148,7 @@ function App() {
         {cartGPS ? (
           <GoogleMapReact
             bootstrapURLKeys={{
-              // insert key below
-              key: '...'
+              key: 'AIzaSyB57gkemGo4XwiDMzwXT2dImCdjh_-s7WQ'
             }}
             center={{
               lat: cartGPS.latitude,
